@@ -438,6 +438,8 @@ func providerConfigure(p *schema.Provider) schema.ConfigureContextFunc {
 
 			CustomManagedIdentityEndpoint: d.Get("msi_endpoint").(string),
 
+			AzureCLIUseCache: true,
+
 			EnableAuthenticatingUsingClientCertificate: true,
 			EnableAuthenticatingUsingClientSecret:      true,
 			EnableAuthenticatingUsingAzureCLI:          enableAzureCli,
